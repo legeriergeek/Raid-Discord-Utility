@@ -40,10 +40,10 @@ x = int(howmanytimes)
 y = 0
 while(x>y):
     response = requests.post(url, headers=headers, json=data)
-
+    #making it better
     if response.status_code == 200:
         print(response.text)
+        y+1
+        sleep(0.2)
     else:
         print(f"Error {response.status_code}: {response.text}")
-    
-    y = y+1
